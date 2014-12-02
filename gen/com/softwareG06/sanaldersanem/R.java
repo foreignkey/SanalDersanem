@@ -116,15 +116,15 @@ containing a value of this type.
         public static final int ygs=0x7f020021;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0022;
-        public static final int btnEkle=0x7f0a0016;
+        public static final int action_settings=0x7f0a0023;
+        public static final int btnEkle=0x7f0a0017;
         public static final int btnKayit=0x7f0a000a;
         public static final int btnLogin=0x7f0a0006;
         public static final int btnRegister=0x7f0a0007;
-        public static final int btnYorum=0x7f0a001f;
+        public static final int btnYorum=0x7f0a0021;
         public static final int buttonsContainer=0x7f0a000c;
         public static final int chevron=0x7f0a0012;
-        public static final int editText1=0x7f0a0015;
+        public static final int editText1=0x7f0a0016;
         public static final int edtPassword=0x7f0a0005;
         public static final int edtPasswordCreate=0x7f0a0009;
         public static final int edtUsername=0x7f0a0004;
@@ -132,25 +132,26 @@ containing a value of this type.
         public static final int image=0x7f0a000e;
         public static final int itemContainer=0x7f0a000d;
         public static final int itemCount=0x7f0a0011;
-        public static final int leftpane1=0x7f0a0019;
-        public static final int listindicator=0x7f0a001a;
-        public static final int movie_duration=0x7f0a001c;
-        public static final int movie_list_view=0x7f0a0017;
-        public static final int movie_poster=0x7f0a0018;
-        public static final int movie_title=0x7f0a001b;
+        public static final int leftpane1=0x7f0a001b;
+        public static final int listindicator=0x7f0a001c;
+        public static final int movie_duration=0x7f0a001e;
+        public static final int movie_list_view=0x7f0a0019;
+        public static final int movie_poster=0x7f0a001a;
+        public static final int movie_title=0x7f0a001d;
         public static final int radial_menu=0x7f0a0002;
-        public static final int ratingBar1=0x7f0a0020;
+        public static final int ratingBar1=0x7f0a0022;
         public static final int scrollView=0x7f0a0000;
-        public static final int spinner1=0x7f0a0013;
-        public static final int spinner2=0x7f0a0014;
+        public static final int spinner1=0x7f0a0014;
+        public static final int spinner2=0x7f0a0015;
         public static final int subtitle=0x7f0a0010;
         public static final int tableView=0x7f0a0001;
-        public static final int textView1=0x7f0a0021;
+        public static final int textView1=0x7f0a0018;
         public static final int title=0x7f0a000f;
+        public static final int txtHos=0x7f0a0013;
         public static final int uyari=0x7f0a0003;
-        public static final int videolog=0x7f0a001e;
+        public static final int videolog=0x7f0a0020;
         public static final int viewsContainer=0x7f0a000b;
-        public static final int youtubeplayerfragment=0x7f0a001d;
+        public static final int youtubeplayerfragment=0x7f0a001f;
     }
     public static final class layout {
         public static final int ders_listesi=0x7f030000;
@@ -163,10 +164,11 @@ containing a value of this type.
         public static final int list_item_single=0x7f030007;
         public static final int list_item_top=0x7f030008;
         public static final int oynatma_listeni_ekle=0x7f030009;
-        public static final int uitableview_activity=0x7f03000a;
-        public static final int video_listview=0x7f03000b;
-        public static final int video_listview_item=0x7f03000c;
-        public static final int video_oynat=0x7f03000d;
+        public static final int oynatma_listesi_al=0x7f03000a;
+        public static final int uitableview_activity=0x7f03000b;
+        public static final int video_listview=0x7f03000c;
+        public static final int video_listview_item=0x7f03000d;
+        public static final int video_oynat=0x7f03000e;
     }
     public static final class menu {
         public static final int main=0x7f090000;

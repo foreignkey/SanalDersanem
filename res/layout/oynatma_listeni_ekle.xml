@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/txtHos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOŞ GELDİNİZ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"

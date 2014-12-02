@@ -61,6 +61,12 @@
         </activity>
         
            <activity
+            android:name="com.softwareG06.sanaldersanem.OynatmaListesiAl"
+            android:icon="@drawable/ic_contact"
+            android:label="Oynatma Listesi Al " >
+        </activity>
+        
+           <activity
             android:name="com.softwareG06.sanaldersanem.KayitOl"
             android:icon="@drawable/ic_contact"
             android:label="Kayıt Ol " >

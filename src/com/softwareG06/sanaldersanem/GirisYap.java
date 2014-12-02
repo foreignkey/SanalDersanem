@@ -110,7 +110,7 @@ public class GirisYap extends Activity {
       	        System.out.println("Connected to the database");
       	        String result = "Database connection success\n";
       	        stmt = conn.createStatement();
-      	        rsSpiner = stmt.executeQuery("SELECT password,uid FROM users where uname='"+personel+"'");
+      	        rsSpiner = stmt.executeQuery("SELECT password,uid,uname FROM users where uname='"+personel+"'");
                   rsmdSpiner = rsSpiner.getMetaData();
                   int numberOfColumns = rsmdSpiner.getColumnCount();
                   if (rsSpiner != null) {
@@ -119,7 +119,7 @@ public class GirisYap extends Activity {
                   String idGonder = rsSpiner.getString(2);
                   if(dbpass.equals(sifre)){
                 	 Intent i = new Intent(getApplicationContext(), OynatmaListesiOlustur.class);
-                	 //i.putExtra("idGonder", idGonder);
+                	 i.putExtra("uname",rsSpiner.getString(3) );
                       startActivity(i);
                 	  Toast.makeText(getApplicationContext(),"Correct Username or Password", Toast.LENGTH_SHORT).show();
 

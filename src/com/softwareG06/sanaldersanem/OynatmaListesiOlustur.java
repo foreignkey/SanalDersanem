@@ -3,6 +3,7 @@ package com.softwareG06.sanaldersanem;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,7 +11,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
  
 public class OynatmaListesiOlustur extends Activity {
@@ -18,10 +21,23 @@ public class OynatmaListesiOlustur extends Activity {
   private Spinner spinner1, spinner2,s,s2,s3;
   private Button btnSubmit;
   ArrayAdapter adapter,adapter2,adapter3;
+  
+  String playlist,uname;
+  Bundle veriAl  = new  Bundle();
+  EditText play;
+  
+  TextView hos;
+  
   @Override
   public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.oynatma_listeni_ekle);
+	
+	hos=(TextView)findViewById(R.id.txtHos);
+	veriAl = getIntent().getExtras();
+	uname    = veriAl.getString("uname");
+	
+	hos.setText("Hoþgeldiniz "+uname+"!");
 	
 	String[] kursSec = new String[] { "KPSS", "YGS", "LYS" };
 	String[] ygs = new String[] { "Türkçe", "Matematik-1", "Geometri-1", "Fizik-1","Kimya-1", "Biyoloji", "Tarih", "Coðrafya" };
@@ -72,11 +88,18 @@ public class OynatmaListesiOlustur extends Activity {
  
 	  @Override
 	  public void onClick(View v) {
- 
+		  play=(EditText)findViewById(R.id.editText1);
+			playlist=play.getText().toString();
+			
+		  Intent i=new Intent(OynatmaListesiOlustur.this,OynatmaListesiAl.class);
+		  i.putExtra("kurs", String.valueOf(spinner1.getSelectedItem()));
+		  i.putExtra("ders", String.valueOf(spinner2.getSelectedItem()));
+		  i.putExtra("playlist", playlist);
+		  startActivity(i);
 	    Toast.makeText(OynatmaListesiOlustur.this,
 		"OnClickListener : " + 
                 "\nSpinner 1 : "+ String.valueOf(spinner1.getSelectedItem()) + 
-                "\nSpinner 2 : "+ String.valueOf(spinner2.getSelectedItem()),
+                "\nSpinner 2 : "+ String.valueOf(spinner2.getSelectedItem())+" "+playlist,
 			Toast.LENGTH_SHORT).show();
 	  }
  

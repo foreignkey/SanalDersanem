@@ -54,7 +54,7 @@ public final class R {
 		public static final int list_item_middle = 0x7f030006;
 		public static final int list_item_single = 0x7f030007;
 		public static final int list_item_top = 0x7f030008;
-		public static final int uitableview_activity = 0x7f03000a;
+		public static final int uitableview_activity = 0x7f03000b;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f050001;
