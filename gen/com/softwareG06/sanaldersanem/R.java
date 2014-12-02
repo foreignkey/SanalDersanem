@@ -11,6 +11,8 @@ public final class R {
     public static final class array {
         public static final int KPSSDersleri=0x7f070003;
         public static final int KursSec=0x7f070002;
+        public static final int LYSDersleri=0x7f070005;
+        public static final int YGSDersleri=0x7f070004;
         public static final int movie_genre_code=0x7f070001;
         public static final int movie_genres=0x7f070000;
     }

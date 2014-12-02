@@ -18,10 +18,22 @@
         <item>LYS</item>
     </string-array>
     
-        <string-array name="KPSSDersleri">
+    <string-array name="KPSSDersleri">
         <item>Genel Kültür</item>
         <item>Vatandaşlık</item>
         <item>Genel Yetenek</item>
+    </string-array>
+    
+    <string-array name="YGSDersleri">
+        <item>MAT1</item>
+        <item>FEN1</item>
+        <item>TURKÇE1</item>
+    </string-array>
+    
+    <string-array name="LYSDersleri">
+        <item>MAT2</item>
+        <item>FEN2</item>
+        <item>Edebiyat</item>
     </string-array>
  
 

@@ -1,5 +1,7 @@
 int array KPSSDersleri 0x7f070003
 int array KursSec 0x7f070002
+int array LYSDersleri 0x7f070005
+int array YGSDersleri 0x7f070004
 int array movie_genre_code 0x7f070001
 int array movie_genres 0x7f070000
 int attr image 0x7f010002

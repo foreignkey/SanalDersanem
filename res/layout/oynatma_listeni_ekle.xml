@@ -15,9 +15,9 @@
         android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/KPSSDersleri"
-        android:prompt="@string/ders_sec"  />
+          />
 
+   
     <EditText
         android:id="@+id/editText1"
         android:layout_width="match_parent"
