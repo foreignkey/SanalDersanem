@@ -11,4 +11,10 @@
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <ListView
+        android:id="@+id/lvKulGelen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
 </LinearLayout>

@@ -23,7 +23,7 @@ import android.widget.Toast;
 public class Giris extends Activity {
 	
 	private SemiCircularRadialMenu mMenu;
-	private SemiCircularRadialMenuItem mYGS, mLYS,  mKPSS, mUyeOl, mHakkimizda ;
+	private SemiCircularRadialMenuItem mYGS, mLYS,  mKPSS, mUyeOl, mKulGelen ;
 	Button login,register;
 	EditText kulAdi,sifre;
 	
@@ -45,6 +45,7 @@ public class Giris extends Activity {
 		mLYS = new SemiCircularRadialMenuItem("lys", getResources().getDrawable(R.drawable.lgs), "LYS");
 		mKPSS = new SemiCircularRadialMenuItem("kpss", getResources().getDrawable(R.drawable.kpss), "KPSS");
 		mYGS = new SemiCircularRadialMenuItem("ygs", getResources().getDrawable(R.drawable.ygs), "YGS");
+		mKulGelen = new SemiCircularRadialMenuItem("kullanicidan_gelen", getResources().getDrawable(R.drawable.ygs), "Kullanýcýdan Gelen");
 
 				
 		mMenu = (SemiCircularRadialMenu) findViewById(R.id.radial_menu);
@@ -54,6 +55,7 @@ public class Giris extends Activity {
 		mMenu.addMenuItem(mYGS.getMenuID(), mYGS);
 		mMenu.addMenuItem(mUyeOl.getMenuID(), mUyeOl);		
 		mMenu.addMenuItem(mKPSS.getMenuID(), mKPSS);
+		mMenu.addMenuItem(mKulGelen.getMenuID(), mKulGelen);
 		
 		
 				
@@ -86,6 +88,12 @@ public class Giris extends Activity {
 			@Override
 			public void onMenuItemPressed() {
 				Intent i=new Intent(Giris.this,GirisYap.class);
+				startActivity(i);				}
+		});
+		mKulGelen.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
+			@Override
+			public void onMenuItemPressed() {
+				Intent i=new Intent(Giris.this,OynatmaListesiAl.class);
 				startActivity(i);				}
 		});
 		
