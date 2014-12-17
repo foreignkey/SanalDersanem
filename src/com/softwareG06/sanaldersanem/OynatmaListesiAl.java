@@ -11,13 +11,19 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class OynatmaListesiAl extends Activity{
+public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 
 	String kurs,ders,playlist,add;
 	TextView tv,tvKurs,tvDers,tvPlay;
@@ -87,6 +93,8 @@ public class OynatmaListesiAl extends Activity{
 	            // fill in the grid_item layout
 		        SimpleAdapter adapter = new SimpleAdapter(this, fillMaps, R.layout.lv_kul_gelen_row, from, to);
 		        lv.setAdapter(adapter);
+		        lv.setOnItemClickListener(new OnItemClickListenerListViewItem());
+		     // React to user clicks on item
 		        
 		        conn.close();
 		        Toast.makeText(getApplicationContext(), "Sorgu yapýldý", Toast.LENGTH_SHORT).show();
@@ -98,6 +106,41 @@ public class OynatmaListesiAl extends Activity{
 		    }
 					
 		}	
+	 
+	 public class OnItemClickListenerListViewItem implements OnItemClickListener {
+
+		    @Override
+		    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+		        Context context = view.getContext();
+
+		        TextView textViewItem = ((TextView) view.findViewById(R.id.tvPlay));
+		        TextView textViewItem2 = ((TextView) view.findViewById(R.id.tvDers));
+
+		        // get the clicked item name
+		        String listItemText = textViewItem.getText().toString();
+		        String listItemText2 = textViewItem2.getText().toString();
+
+		        Intent i = new Intent(OynatmaListesiAl.this, YGSDersler.class);
+
+		        i.putExtra("title", listItemText2);
+                i.putExtra("send", listItemText);
+				startActivity(i);
+
+		        // just toast it
+		        Toast.makeText(context, "Item: " + listItemText + ", Item ID: "+listItemText2, Toast.LENGTH_SHORT).show();
+
+
+		    }
+
+		}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

@@ -23,17 +23,17 @@ public final class R {
 		public static final int text_color_selector = 0x7f040007;
 	}
 	public static final class drawable {
-		public static final int background_view_rounded_bottom = 0x7f020002;
-		public static final int background_view_rounded_container = 0x7f020003;
-		public static final int background_view_rounded_middle = 0x7f020004;
-		public static final int background_view_rounded_single = 0x7f020005;
-		public static final int background_view_rounded_top = 0x7f020006;
-		public static final int button_text_color = 0x7f020009;
-		public static final int chevron = 0x7f02000a;
-		public static final int chevron_default = 0x7f02000b;
-		public static final int chevron_default_down = 0x7f02000c;
-		public static final int chevron_white = 0x7f02000d;
-		public static final int chevron_white_down = 0x7f02000e;
+		public static final int background_view_rounded_bottom = 0x7f020003;
+		public static final int background_view_rounded_container = 0x7f020004;
+		public static final int background_view_rounded_middle = 0x7f020005;
+		public static final int background_view_rounded_single = 0x7f020006;
+		public static final int background_view_rounded_top = 0x7f020007;
+		public static final int button_text_color = 0x7f02000a;
+		public static final int chevron = 0x7f02000b;
+		public static final int chevron_default = 0x7f02000c;
+		public static final int chevron_default_down = 0x7f02000d;
+		public static final int chevron_white = 0x7f02000e;
+		public static final int chevron_white_down = 0x7f02000f;
 		public static final int icon = 0x7f02001d;
 	}
 	public static final class id {

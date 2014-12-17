@@ -1,6 +1,8 @@
 package com.softwareG06.sanaldersanem;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -18,6 +20,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.TextView;
@@ -49,24 +52,35 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 	ResultSetMetaData rsmdSpiner ;
 	PreparedStatement ps;
 		
-	String log = "",sorgu;
+	static String log = "",sorgu,yorum,ratingg;
 
+	EditText yorumAl;
 	RatingBar ratingBar;
-	
+	Button yorumYap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_oynat);
         
-        ((RatingBar) findViewById(R.id.ratingBar1)).setOnRatingBarChangeListener(this);
+        ratingBar=(RatingBar) findViewById(R.id.ratingBar1);
+        ratingBar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
+    		public void onRatingChanged(RatingBar ratingBar, float rating,
+    			boolean fromUser) {
+     
+    			ratingg=String.valueOf(rating);
+    			Toast.makeText(getApplicationContext(),ratingg ,Toast.LENGTH_SHORT).show();
+     
+    		}
+    	});
 
-		videoID=getIntent().getStringExtra(YGSDersler.ID_Extra);
+        videoID=getIntent().getStringExtra(YGSDersler.ID_Extra);
 		index=getIntent().getStringExtra("index");
 		receivedListID=getIntent().getStringExtra("received"); 
 		
-		Toast.makeText(getApplicationContext(), videoID, 1).show();
-		
-	/*	try {
+		try {
+			
+			
+			Toast.makeText(getApplicationContext(), videoID, 1).show();
 			Class.forName(driver).newInstance();
 	        conn = DriverManager.getConnection(url+dbName,userName,password);
 	        stmt = conn.createStatement();
@@ -79,16 +93,48 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 	        }
 	        catch(Exception e){
 	        	
-	        }*/
+	        }
         
 	    TV=(TextView)findViewById(R.id.textView1);
-	    
-	    
-
-        
+	    yorumYap=(Button)findViewById(R.id.btnYorum);
+	            
          youTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()
         	    .findFragmentById(R.id.youtubeplayerfragment);
-        youTubePlayerFragment.initialize(API_KEY, this);       
+        youTubePlayerFragment.initialize(API_KEY, this);
+        
+        yorumYap.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Calendar c = Calendar.getInstance();
+		        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		        String formattedDate = df.format(c.getTime());
+		        Toast.makeText(getApplicationContext(), formattedDate, 1).show();
+				try {
+					
+					yorumAl=(EditText)findViewById(R.id.edtYorumAl);
+					yorum=yorumAl.getText().toString();
+					Toast.makeText(getApplicationContext(), videoID, 1).show();
+					Class.forName(driver).newInstance();
+			        conn = DriverManager.getConnection(url+dbName,userName,password);
+			        stmt = conn.createStatement();
+			        String a=formattedDate;
+			        sorgu= "INSERT INTO yorum (yorum,video_id,rating,time) VALUES (?,?,?,?)"; 
+			        ps=(PreparedStatement) conn.prepareStatement(sorgu);
+			        ps.setString(1,yorum);
+			        ps.setString(2,videoID);
+			        ps.setString(3,ratingg);
+			        ps.setString(4,a);
+			        ps.execute();
+			       
+			       
+			        }
+			        catch(Exception e){
+			        	
+			        }
+			}
+		});
     }
     
     @Override

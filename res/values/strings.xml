@@ -11,6 +11,8 @@
     <string name="action_settings">Settings</string>
      <string name="kategori_sec">Kategori Seç</string>
      <string name="ders_sec">Ders Seç</string>
+     
+     <string name="click_me">Click Me</string>
     
      <string-array name="KursSec">
         <item>KPSS</item>

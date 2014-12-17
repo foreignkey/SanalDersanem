@@ -51,7 +51,7 @@ public class ImageLoader {
     }
      
     // default image show in list (Before online image download)
-    final int stub_id=R.drawable.ic_loading;
+    final int stub_id=R.drawable.ic_launcher;
      
     public void DisplayImage(String url, ImageView imageView)
     {
