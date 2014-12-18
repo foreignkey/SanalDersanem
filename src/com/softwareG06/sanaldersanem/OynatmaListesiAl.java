@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -75,6 +76,7 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 	               Class.forName(driver).newInstance();
 		        conn = DriverManager.getConnection(url+dbName,userName,password);
 		        System.out.println("Connected to the database");
+		        String result = "Database connection success\n";
 		         stmt = conn.createStatement();
 		         rsSpiner = stmt.executeQuery(sorgulama);
 	             rsmdSpiner = rsSpiner.getMetaData();
