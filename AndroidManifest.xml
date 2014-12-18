@@ -27,8 +27,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.softwareG06.sanaldersanem.Giris"
-            android:label="@string/app_name" >
+            android:name="com.softwareG06.sanaldersanem.GirisYap"
+            android:label="Giriş Yap" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,9 +49,9 @@
         </activity>
         
           <activity
-            android:name="com.softwareG06.sanaldersanem.GirisYap"
+            android:name="com.softwareG06.sanaldersanem.Giris"
             android:icon="@drawable/ic_contact"
-            android:label="Giriş Yap " >
+            android:label="Sanal Dersanem " >
         </activity>
         
            <activity
