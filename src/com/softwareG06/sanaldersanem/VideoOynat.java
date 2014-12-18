@@ -2,7 +2,10 @@ package com.softwareG06.sanaldersanem;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
 
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -12,16 +15,26 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
 import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.softwareG06.sanaldersanem.OynatmaListesiAl.OnItemClickListenerListViewItem;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.SimpleAdapter;
 import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,12 +52,12 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 	private String userName = "softwareG06"; 
 	private String password = "softwareG06";  
 	TextView TV;
-	
+	ListView lv;
 	
 	private YouTubePlayer youTubePlayer;
 	private YouTubePlayerFragment youTubePlayerFragment;
 	private Button btnViewFullScreen;
-	static String videoID,index,receivedListID;
+	static String videoID,index,receivedListID,user;
 	private static final int RQS_ErrorDialog = 1;
 	
 	Statement stmt;
@@ -52,8 +65,9 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 	ResultSetMetaData rsmdSpiner ;
 	PreparedStatement ps;
 		
-	static String log = "",sorgu,yorum,ratingg;
+	static String log = "",sorgu,yorum,ratingg,sorguYorum;
 
+	
 	EditText yorumAl;
 	RatingBar ratingBar;
 	Button yorumYap;
@@ -73,14 +87,17 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
     		}
     	});
 
+       
         videoID=getIntent().getStringExtra(YGSDersler.ID_Extra);
 		index=getIntent().getStringExtra("index");
+		user    = getIntent().getStringExtra("uname");
 		receivedListID=getIntent().getStringExtra("received"); 
-		
+		Toast.makeText(getApplicationContext(), videoID+" "+user, Toast.LENGTH_LONG).show();
+
 		try {
 			
 			
-			Toast.makeText(getApplicationContext(), videoID, 1).show();
+			Toast.makeText(getApplicationContext(), videoID+" "+user, 1).show();
 			Class.forName(driver).newInstance();
 	        conn = DriverManager.getConnection(url+dbName,userName,password);
 	        stmt = conn.createStatement();
@@ -101,7 +118,8 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
          youTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()
         	    .findFragmentById(R.id.youtubeplayerfragment);
         youTubePlayerFragment.initialize(API_KEY, this);
-        
+        sorguYorum="select uname,yorum,time,rating  from yorum inner join video on yorum.video_id=video.video_id inner join users on yorum.uid=users.uid  where yorum.video_id='"+videoID+"' ORDER BY time DESC";
+        cagir(sorguYorum);
         yorumYap.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -113,6 +131,8 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 		        Toast.makeText(getApplicationContext(), formattedDate, 1).show();
 				try {
 					
+					
+					
 					yorumAl=(EditText)findViewById(R.id.edtYorumAl);
 					yorum=yorumAl.getText().toString();
 					Toast.makeText(getApplicationContext(), videoID, 1).show();
@@ -120,12 +140,13 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 			        conn = DriverManager.getConnection(url+dbName,userName,password);
 			        stmt = conn.createStatement();
 			        String a=formattedDate;
-			        sorgu= "INSERT INTO yorum (yorum,video_id,rating,time) VALUES (?,?,?,?)"; 
+			        sorgu= "INSERT INTO yorum (yorum,video_id,rating,time,uid) VALUES (?,?,?,?,?)"; 
 			        ps=(PreparedStatement) conn.prepareStatement(sorgu);
 			        ps.setString(1,yorum);
 			        ps.setString(2,videoID);
 			        ps.setString(3,ratingg);
 			        ps.setString(4,a);
+			        ps.setString(5,user);
 			        ps.execute();
 			       
 			       
@@ -133,7 +154,9 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 			        catch(Exception e){
 			        	
 			        }
+				cagir(sorguYorum);
 			}
+			
 		});
     }
     
@@ -169,4 +192,50 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 
 	}
 	
+	 public void cagir(String sorgulama){
+			try {
+				lv= (ListView)findViewById(R.id.lvYorum);
+		   String[] from = new String[] {"textKurs", "textDers","textPlay","textRate"};
+			    int[] to = new int[] { R.id.tvKul, R.id.tvYorum, R.id.tvDate, R.id.tvRate };
+		        // prepare the list of all records
+		        List<HashMap<String, String>> fillMaps = new ArrayList<HashMap<String, String>>();
+		     
+		  
+	               Class.forName(driver).newInstance();
+		        conn = DriverManager.getConnection(url+dbName,userName,password);
+		        System.out.println("Connected to the database");
+		         stmt = conn.createStatement();
+		         rsSpiner = stmt.executeQuery(sorgulama);
+	             rsmdSpiner = rsSpiner.getMetaData();
+	             
+	            while(rsSpiner.next()) {
+
+	            	HashMap<String, String> map = new HashMap<String, String>();
+	        	map.put("textKurs", "" + rsSpiner.getString(1));
+	            map.put("textDers","" + rsSpiner.getString(2));
+	           map.put("textPlay","" + rsSpiner.getString(3));
+	           map.put("textRate","" + rsSpiner.getString(4));
+
+	            fillMaps.add(map);
+	            }
+	            // fill in the grid_item layout
+		        SimpleAdapter adapter = new SimpleAdapter(this, fillMaps, R.layout.yorum_list_row, from, to);
+		        lv.setAdapter(adapter);
+		     // React to user clicks on item
+		        
+		        conn.close();
+		        Toast.makeText(getApplicationContext(), "Sorgu yapýldý", Toast.LENGTH_SHORT).show();
+
+		        System.out.println("Disconnected from database");
+		    } catch (Exception e) {
+		    	
+		        e.printStackTrace();
+		    }
+					
+		}	
+	 
+	
+	
+	
 }
+

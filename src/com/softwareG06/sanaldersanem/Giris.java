@@ -1,105 +1,163 @@
 package com.softwareG06.sanaldersanem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.Statement;
-
-
-import com.touchmenotapps.widget.radialmenu.semicircularmenu.SemiCircularRadialMenu;
-import com.touchmenotapps.widget.radialmenu.semicircularmenu.SemiCircularRadialMenuItem;
-import com.touchmenotapps.widget.radialmenu.semicircularmenu.SemiCircularRadialMenuItem.OnSemiCircularRadialMenuPressed;
-
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class Giris extends Activity {
 	
-	private SemiCircularRadialMenu mMenu;
-	private SemiCircularRadialMenuItem mYGS, mLYS,  mKPSS, mUyeOl, mKulGelen ;
-	Button login,register;
-	EditText kulAdi,sifre;
-	
-	private Connection conn = null;  
-	private String url = "jdbc:mysql://85.159.67.247:3306/";
-	private String dbName = "softwareG06";
-	private String driver = "com.mysql.jdbc.Driver";  
-	private String userName = "softwareG06"; 
-	private String password = "softwareG06";  
-	
-	String kul,sif;
+
+	Button one,two,three,four;
+	final boolean checked_state[]={false,false,false,false}; //The array that holds the checked state of the checkbox items
+	final CharSequence[] colors_check={"KPSS","YGS","LYS","Sizden Gelen"}; //items in the alertdialog that displays checkboxes
+	final int CHECKBOX_ALERTDIALOG=1;
+
+	static String user;
+	Bundle veriAl=new Bundle();
+
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.giris);
+		setContentView(R.layout.main_screen);
 		
-		mUyeOl = new SemiCircularRadialMenuItem("uye_ol", getResources().getDrawable(R.drawable.ic_action_search), "Üye Ol");
-		mLYS = new SemiCircularRadialMenuItem("lys", getResources().getDrawable(R.drawable.lgs), "LYS");
-		mKPSS = new SemiCircularRadialMenuItem("kpss", getResources().getDrawable(R.drawable.kpss), "KPSS");
-		mYGS = new SemiCircularRadialMenuItem("ygs", getResources().getDrawable(R.drawable.ygs), "YGS");
-		mKulGelen = new SemiCircularRadialMenuItem("kullanicidan_gelen", getResources().getDrawable(R.drawable.ygs), "Kullanýcýdan Gelen");
+		one=(Button)findViewById(R.id.bOne);
+		two=(Button)findViewById(R.id.bTwo);
+		three=(Button)findViewById(R.id.bThree);
+		four=(Button)findViewById(R.id.bFour);
+		
+		one.setOnClickListener(onClickListener);
+        two.setOnClickListener(onClickListener);
+        three.setOnClickListener(onClickListener);
+        four.setOnClickListener(onClickListener);
+}
 
-				
-		mMenu = (SemiCircularRadialMenu) findViewById(R.id.radial_menu);
-		
-		
-		mMenu.addMenuItem(mLYS.getMenuID(), mLYS);
-		mMenu.addMenuItem(mYGS.getMenuID(), mYGS);
-		mMenu.addMenuItem(mUyeOl.getMenuID(), mUyeOl);		
-		mMenu.addMenuItem(mKPSS.getMenuID(), mKPSS);
-		mMenu.addMenuItem(mKulGelen.getMenuID(), mKulGelen);
-		
-		
-				
-		mKPSS.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
-			@Override
-			public void onMenuItemPressed() {
-				Toast.makeText(Giris.this, mKPSS.getText(), Toast.LENGTH_LONG).show();
-			}
-		});
-		
-		
-		mLYS.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
-			@Override
-			public void onMenuItemPressed() {
-				Toast.makeText(Giris.this, mLYS.getText(), Toast.LENGTH_LONG).show();
-			}
-		});
-		
-		
-		
-		mYGS.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
-			@Override
-			public void onMenuItemPressed() {
-				Intent i=new Intent(Giris.this,YGSMain.class);
-				startActivity(i);				}
-		});
-		
-		
-		mUyeOl.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
-			@Override
-			public void onMenuItemPressed() {
-				Intent i=new Intent(Giris.this,GirisYap.class);
-				startActivity(i);				}
-		});
-		mKulGelen.setOnSemiCircularRadialMenuPressed(new OnSemiCircularRadialMenuPressed() {
-			@Override
-			public void onMenuItemPressed() {
-				Intent i=new Intent(Giris.this,OynatmaListesiAl.class);
-				startActivity(i);				}
-		});
-		
-		
-		
-	}
-	
-	
+private OnClickListener onClickListener = new OnClickListener() {
+     @Override
+     public void onClick(View v) {
+         switch(v.getId()){
+             case R.id.bOne:
+            	    showDialog(CHECKBOX_ALERTDIALOG);
+             break;
+             case R.id.bTwo:
+                  //DO something
+             break;
+             case R.id.bThree:
+                 //DO something
+             break;
+             case R.id.bFour:
+                  //DO something
+             break;
+         }
+
+   }
+};
+
+
+/*triggered by showDialog method. onCreateDialog creates a dialog*/
+@Override
+public Dialog onCreateDialog(int id) {
+switch (id) {
+
+case CHECKBOX_ALERTDIALOG:
+
+AlertDialog.Builder builder1=new AlertDialog.Builder(Giris.this)
+.setTitle("Kurs Seç")
+.setMultiChoiceItems(colors_check, null, new DialogInterface.OnMultiChoiceClickListener() {
+
+@Override
+public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+// TODO Auto-generated method stub
+
+//storing the checked state of the items in an array
+checked_state[which]=isChecked;
+}
+})
+.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+@Override
+public void onClick(DialogInterface dialog, int which) {
+// TODO Auto-generated method stub
+	Intent intent;
+	veriAl = getIntent().getExtras();
+	user    = veriAl.getString("uname");
+String display_checked_colors = "";
+for(int i=0;i<4;i++){
+if(checked_state[i]==true){
+display_checked_colors=display_checked_colors+" "+colors_check[i];
+if (i==0) {
+
+	intent=new Intent(Giris.this,YGSMain.class);
+	 intent.putExtra("uname",user );
+	startActivity(intent);
+} else if (i==1) {
+	intent=new Intent(Giris.this,YGSMain.class);
+	 intent.putExtra("uname",user );
+	startActivity(intent);
+}
+else if (i==2) {
+	intent=new Intent(Giris.this,YGSMain.class);
+	 intent.putExtra("uname",user );
+	startActivity(intent);
+}
+else if (i==3) {
+	intent=new Intent(Giris.this,OynatmaListesiAl.class);
+	 intent.putExtra("uname",user );
+	startActivity(intent);
+}
+
+
+}
+
+}
+Toast.makeText(getApplicationContext(), "The selected color(s) is "+display_checked_colors, Toast.LENGTH_LONG).show();
+
+//clears the String used to store the displayed text
+display_checked_colors=null;
+
+//clears the array used to store checked state
+for(int i=0;i<checked_state.length;i++){
+if(checked_state[i]==true){
+checked_state[i]=false;
+}
+}
+
+//used to dismiss the dialog upon user selection.
+dialog.dismiss();
+}
+});
+AlertDialog alertdialog1=builder1.create();
+return alertdialog1;
+
+
+}
+return null;
+
+}
+
+@Override
+protected void onPrepareDialog(int id, Dialog dialog) {
+// TODO Auto-generated method stub
+
+switch (id) {
+case CHECKBOX_ALERTDIALOG:
+AlertDialog prepare_checkbox_dialog=(AlertDialog)dialog;
+ListView list_checkbox=prepare_checkbox_dialog.getListView();
+for(int i=0;i<list_checkbox.getCount();i++){
+list_checkbox.setItemChecked(i, false);
+}
+break;
+
+
+}
+
+}	
 }
