@@ -118,10 +118,10 @@ public class GirisYap extends Activity {
                   String dbpass = rsSpiner.getString(1);
                   String idGonder = rsSpiner.getString(2);
                   if(dbpass.equals(sifre)){
-                	 Intent i = new Intent(getApplicationContext(), Giris.class);
-                	 i.putExtra("uname",idGonder );
+                	 Intent i = new Intent(getApplicationContext(), OynatmaListesiOlustur.class);
+                	 i.putExtra("uname",rsSpiner.getString(3) );
                       startActivity(i);
-                	  Toast.makeText(getApplicationContext(),"Correct Username AND Password", Toast.LENGTH_SHORT).show();
+                	  Toast.makeText(getApplicationContext(),"Correct Username or Password", Toast.LENGTH_SHORT).show();
 
                   }
                   else

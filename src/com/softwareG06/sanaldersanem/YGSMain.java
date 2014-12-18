@@ -12,9 +12,6 @@ import android.util.Log;
 public class YGSMain extends Activity {
     
 	UITableView tableView;
-	static String user;
-	Bundle veriAl=new Bundle();
-
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,10 +43,8 @@ public class YGSMain extends Activity {
 		@Override
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
-			veriAl = getIntent().getExtras();
-			user    = veriAl.getString("uname");
 			Intent i = new Intent(YGSMain.this, YGSDersler.class);
-			i.putExtra("uname",user );
+
 			if(index == 0) {
 				i.putExtra("title", "Matematik");
                 i.putExtra("send", "PLoh2nz3f2DacT7u3wv-QjZ6dMglUATwpm");

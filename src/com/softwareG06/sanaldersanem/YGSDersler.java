@@ -34,7 +34,7 @@ public class YGSDersler extends Activity implements  OnItemClickListener,YouTube
 	public static final String PROCESS_DIALOG_MSG="Loading...";
 	
 	 Bundle paketim  = new  Bundle();
-	 String receive,getTitle,user;
+	 String receive,getTitle;
      	
 	private static String url;//Number of max counts you want.
 	
@@ -49,7 +49,6 @@ public class YGSDersler extends Activity implements  OnItemClickListener,YouTube
 		paketim = getIntent().getExtras();
 		receive    = paketim.getString("send");
 		getTitle=paketim.getString("title");
-		user    = paketim.getString("uname");
 		setTitle(getTitle);
 		
 		url="http://gdata.youtube.com/feeds/api/playlists/" +
@@ -126,7 +125,6 @@ public class YGSDersler extends Activity implements  OnItemClickListener,YouTube
 		Intent i=new Intent(YGSDersler.this,VideoOynat.class);
 		i.putExtra(ID_Extra,""+list.get(arg2).getVideo_id());
 		i.putExtra("index",""+a);
-		i.putExtra("uname",user );
 		i.putExtra("received",""+receive);
 		startActivity(i);			
 	}
