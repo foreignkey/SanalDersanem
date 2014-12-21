@@ -20,7 +20,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 
@@ -95,9 +94,7 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 		     // React to user clicks on item
 		        
 		        conn.close();
-		        Toast.makeText(getApplicationContext(), "Sorgu yapýldý", Toast.LENGTH_SHORT).show();
 
-		        System.out.println("Disconnected from database");
 		    } catch (Exception e) {
 		    	
 		        e.printStackTrace();
@@ -126,7 +123,6 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 				startActivity(i);
 
 		        // just toast it
-		        Toast.makeText(context, "Item: " + listItemText + ", Item ID: "+listItemText2, Toast.LENGTH_SHORT).show();
 
 
 		    }

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class Giris extends Activity {
 	
@@ -20,7 +19,7 @@ public class Giris extends Activity {
 	final CharSequence[] colors_check={"KPSS","YGS","LYS","Sizden Gelen"}; //items in the alertdialog that displays checkboxes
 	final int CHECKBOX_ALERTDIALOG=1;
 
-	static String user;
+	static String user,name;
 	Bundle veriAl=new Bundle();
 
 	
@@ -28,6 +27,9 @@ public class Giris extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_screen);
+		veriAl = getIntent().getExtras();
+		user    = veriAl.getString("uname");
+		name   = veriAl.getString("name");
 		
 		one=(Button)findViewById(R.id.bOne);
 		two=(Button)findViewById(R.id.bTwo);
@@ -48,7 +50,9 @@ private OnClickListener onClickListener = new OnClickListener() {
             	    showDialog(CHECKBOX_ALERTDIALOG);
              break;
              case R.id.bTwo:
-                  //DO something
+            	 Intent oyatmaOlustur=new Intent(Giris.this,OynatmaListesiOlustur.class);
+            	 oyatmaOlustur.putExtra("uname",name );
+            	 startActivity(oyatmaOlustur);
              break;
              case R.id.bThree:
                  //DO something
@@ -87,8 +91,7 @@ checked_state[which]=isChecked;
 public void onClick(DialogInterface dialog, int which) {
 // TODO Auto-generated method stub
 	Intent intent;
-	veriAl = getIntent().getExtras();
-	user    = veriAl.getString("uname");
+	
 String display_checked_colors = "";
 for(int i=0;i<4;i++){
 if(checked_state[i]==true){
@@ -118,7 +121,6 @@ else if (i==3) {
 }
 
 }
-Toast.makeText(getApplicationContext(), "The selected color(s) is "+display_checked_colors, Toast.LENGTH_LONG).show();
 
 //clears the String used to store the displayed text
 display_checked_colors=null;

@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/tvKurs"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kurs"
-        android:paddingRight="10dp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_height="60dp"
+        android:padding="5dp"
+        android:background="#99CC00"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
 
-    <TextView
-        android:id="@+id/tvDers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ders"
-        android:paddingRight="10dp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tvKurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Kurs"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/tvPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="playlist"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tvPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvKurs"
+            android:text="playlist"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="invisible" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvDers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvPlay"
+            android:layout_alignBottom="@+id/tvPlay"
+            android:layout_alignLeft="@+id/tvKurs"
+            android:layout_alignRight="@+id/tvPlay"
+            android:paddingRight="10dp"
+            android:text="Ders"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

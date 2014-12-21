@@ -22,7 +22,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 public class YGSDersler extends Activity implements  OnItemClickListener,YouTubePlayer.OnInitializedListener{
@@ -115,7 +114,6 @@ public class YGSDersler extends Activity implements  OnItemClickListener,YouTube
 			if(dialog.isShowing()){
 				dialog.dismiss();
 			}		
-			Toast.makeText(getBaseContext(), ""+list.size(),Toast.LENGTH_SHORT).show();
 			super.onPostExecute(result);
 		}
 	}

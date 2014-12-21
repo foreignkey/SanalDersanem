@@ -1,29 +1,13 @@
 package com.softwareG06.sanaldersanem;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Connection;
@@ -31,21 +15,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 public class GirisYap extends Activity {
 	
@@ -53,13 +23,7 @@ public class GirisYap extends Activity {
     Button login,kayitOl;
     String  personel,sifre,gonderId;
     
-   /* private String url = "jdbc:mysql://atahan.net:1071/";
-	private String dbName = "c1spor";
-	private String driver = "com.mysql.jdbc.Driver";  
-	private String userName = "c1spor"; 
-	private String password = "14531071."; */
-	
-	private String url = "jdbc:mysql://85.159.67.247:3306/";
+   	private String url = "jdbc:mysql://85.159.67.247:3306/";
 	private String dbName = "softwareG06";
 	private String driver = "com.mysql.jdbc.Driver";  
 	private String userName = "softwareG06"; 
@@ -84,6 +48,10 @@ public class GirisYap extends Activity {
  
             public void onClick(View v) {
                 // Switching to Register screen
+            	final ProgressDialog progressDialog = new ProgressDialog(GirisYap.this);
+            	progressDialog.setMessage("Loading ...");
+            	progressDialog.setCancelable(false);
+            	progressDialog.show();
             	Intent i=new Intent(GirisYap.this, KayitOl.class);
             	startActivity(i);
             }
@@ -120,8 +88,8 @@ public class GirisYap extends Activity {
                   if(dbpass.equals(sifre)){
                 	 Intent i = new Intent(getApplicationContext(), Giris.class);
                 	 i.putExtra("uname",idGonder );
+                	 i.putExtra("name",rsSpiner.getString(3) );
                       startActivity(i);
-                	  Toast.makeText(getApplicationContext(),"Correct Username AND Password", Toast.LENGTH_SHORT).show();
 
                   }
                   else
@@ -131,18 +99,13 @@ public class GirisYap extends Activity {
                   }
                   }
       	        conn.close();
-      	        Toast.makeText(getApplicationContext(), "Sorgu yapýldý, ÞÝFRE :"+sifre, Toast.LENGTH_SHORT).show();
 
-      	        System.out.println("Disconnected from database");
       	    } catch (Exception e) {
       	    	
       	        e.printStackTrace();
-      	       // tv.setText(e.toString());
       	    }
             	
-              // Intent i = new Intent(getApplicationContext(), Sporsalonu.class);
-               //startActivity(i);
-            }
+                         }
         });
     }
 }

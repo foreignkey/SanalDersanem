@@ -6,30 +6,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
-
-
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
 import com.google.android.youtube.player.YouTubePlayerFragment;
-import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
-import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
-import com.softwareG06.sanaldersanem.OynatmaListesiAl.OnItemClickListenerListViewItem;
-
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -82,7 +67,6 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
     			boolean fromUser) {
      
     			ratingg=String.valueOf(rating);
-    			Toast.makeText(getApplicationContext(),ratingg ,Toast.LENGTH_SHORT).show();
      
     		}
     	});
@@ -92,12 +76,10 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 		index=getIntent().getStringExtra("index");
 		user    = getIntent().getStringExtra("uname");
 		receivedListID=getIntent().getStringExtra("received"); 
-		Toast.makeText(getApplicationContext(), videoID+" "+user, Toast.LENGTH_LONG).show();
 
 		try {
 			
 			
-			Toast.makeText(getApplicationContext(), videoID+" "+user, 1).show();
 			Class.forName(driver).newInstance();
 	        conn = DriverManager.getConnection(url+dbName,userName,password);
 	        stmt = conn.createStatement();
@@ -128,14 +110,12 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 				Calendar c = Calendar.getInstance();
 		        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		        String formattedDate = df.format(c.getTime());
-		        Toast.makeText(getApplicationContext(), formattedDate, 1).show();
 				try {
 					
 					
 					
 					yorumAl=(EditText)findViewById(R.id.edtYorumAl);
 					yorum=yorumAl.getText().toString();
-					Toast.makeText(getApplicationContext(), videoID, 1).show();
 					Class.forName(driver).newInstance();
 			        conn = DriverManager.getConnection(url+dbName,userName,password);
 			        stmt = conn.createStatement();
@@ -164,7 +144,6 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
     public void onRatingChanged(RatingBar ratingBar, float rating,
       boolean fromTouch) {
      final int numStars = ratingBar.getNumStars();
-     Toast.makeText(getApplicationContext(),rating + "/" + numStars,1).show();
     }
 
 	@Override
@@ -224,9 +203,7 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 		     // React to user clicks on item
 		        
 		        conn.close();
-		        Toast.makeText(getApplicationContext(), "Sorgu yapýldý", Toast.LENGTH_SHORT).show();
 
-		        System.out.println("Disconnected from database");
 		    } catch (Exception e) {
 		    	
 		        e.printStackTrace();
