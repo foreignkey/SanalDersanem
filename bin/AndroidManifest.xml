@@ -23,7 +23,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/llogo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -50,27 +50,46 @@
         
           <activity
             android:name="com.softwareG06.sanaldersanem.Giris"
-            android:icon="@drawable/ic_contact"
+            android:icon="@drawable/llogo"
             android:label="Sanal Dersanem " >
         </activity>
         
            <activity
             android:name="com.softwareG06.sanaldersanem.OynatmaListesiOlustur"
-            android:icon="@drawable/ic_contact"
+            android:icon="@drawable/llogo"
             android:label="Oynatma Listesi Oluştur " >
         </activity>
         
            <activity
             android:name="com.softwareG06.sanaldersanem.OynatmaListesiAl"
-            android:icon="@drawable/ic_contact"
+            android:icon="@drawable/llogo"
             android:label="Oynatma Listesi Al " >
         </activity>
         
            <activity
             android:name="com.softwareG06.sanaldersanem.KayitOl"
-            android:icon="@drawable/ic_contact"
+            android:icon="@drawable/llogo"
             android:label="Kayıt Ol " >
         </activity>
+        
+
+        
+
+         <activity android:name=".MakeChoice"
+             android:icon="@drawable/llogo"
+            android:label="Test Seç " 
+                  ></activity>
+             <activity android:name=".TestCoz"
+                  ></activity>
+             <activity android:name=".Sonuc"
+                 android:icon="@drawable/llogo"
+            android:label="Test Sonuç " 
+                  ></activity>
+              
+               <activity android:name=".ShowAnswer"
+                   android:icon="@drawable/llogo"
+            android:label="Test Cevaplar " 
+                  ></activity>
         
        
     </application>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/kpss1" >
+
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/TxtView"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="34dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/TxtView"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/question"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/Correct" />
+
+    <TextView
+        android:id="@+id/correct"
+        style="@style/TxtView"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TxtView"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="43dp"
+        android:text="@string/Your" />
+
+    <TextView
+        android:id="@+id/your"
+        style="@style/TxtView"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="TextView" />
+
+</RelativeLayout>

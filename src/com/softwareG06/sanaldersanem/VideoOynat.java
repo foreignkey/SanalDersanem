@@ -94,7 +94,6 @@ public class VideoOynat extends Activity implements OnInitializedListener,OnRati
 	        	
 	        }
         
-	    TV=(TextView)findViewById(R.id.textView1);
 	    yorumYap=(Button)findViewById(R.id.btnYorum);
 	            
          youTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()

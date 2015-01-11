@@ -113,11 +113,12 @@ public class OynatmaListesiOlustur extends Activity {
 				Class.forName(driver).newInstance();
 		        conn = DriverManager.getConnection(url+dbName,userName,password);
 		        stmt = conn.createStatement();
-		       String add= "INSERT INTO playlist_al (kurs, ders, playlist) VALUES (?,?,?)"; 
+		       String add= "INSERT INTO playlist_al (kurs, ders, playlist,uname) VALUES (?,?,?,?)"; 
 		        ps=(PreparedStatement) conn.prepareStatement(add);
 		        ps.setString(1, String.valueOf(spinner1.getSelectedItem()));
 		        ps.setString(2,String.valueOf(spinner2.getSelectedItem()));
 		        ps.setString(3,playlist);
+		        ps.setString(4,uname);
 		        ps.execute();
 		       
 		       

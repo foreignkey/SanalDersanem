@@ -1,0 +1,314 @@
+﻿<section>
+<name>QuizLPI</name>
+
+<questiongroup>
+<question>
+Bir radyonun sesi yükseltildiğinde işitilen ses dalgalarının hangi özelliği artar?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>1</questionnumber>
+<answer>Frekansı</answer>
+<answer>Hızı</answer>
+<answer>Periyodu</answer>
+<answer>Dalga Boyu</answer>
+<answer correct="true">Genliği</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Periyodik çizelgede Ca elementi IIA grubunda,Cl elementi ise VIIA grubunda bulunmaktadır.Bu elementler ve birbirleriyle oluşturduğu bileşikle ilgili aşağıdakilerden hangisi yanlıştır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>2</questionnumber>
+<answer>Ca metalik, Cl ametalik özellik gösterir.</answer>
+<answer>Birbirleriyle CaCl2 bileşiğini oluştururlar.</answer>
+<answer correct="true">
+Birbirleriyle oluşturdukları bileşik moleküler yapıdadır.
+</answer>
+<answer>
+Ca element atomu 2 elektron verdiğinde katman elektron dizilimi kendisine en yakın soy gaz elektron dizilimi gibi olur.
+</answer>
+<answer>
+Cl elementi elektron alma, Ca elementi ise elektron verme eğilimindedir.
+</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Aşağıdakilerden hangisi, bir gölde ötrofikasyon olayının meydana getirdiği sonuçlardan biri değildir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>3</questionnumber>
+<answer>Zemine yakın kısımlarda oksijen miktarında azalma</answer>
+<answer correct="true">Bakteri etkinliklerinde azalma</answer>
+<answer>Alg miktarında aşırı çoğalma</answer>
+<answer>Bazı canlı türlerinin birey sayısında azalma</answer>
+<answer>Suyun ışık geçirgenliğinde azalma</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Aşağıdaki organik molekül çiftlerinden hangilerinin yapı taşı benzerdir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>4</questionnumber>
+<answer>Glikojen – Kolesterol</answer>
+<answer correct="true">Glikojen – Nişasta</answer>
+<answer>İnsülin – Kolesterol</answer>
+<answer>İnsülin – Glikojen</answer>
+<answer>İnsülin – Nişasta</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Tatlısularda yaşayan bir paramesyum, bulunduğu ortamdan alınarak derişimi daha yüksek olan bir ortama konulmuştur.Bu durumda paramesyumda aşağıdaki organellerden hangisinin çalışma hızının yavaşlaması beklenir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>5</questionnumber>
+<answer correct="true">Kontraktil koful</answer>
+<answer>Endoplazmik retikulum</answer>
+<answer>Lizozom</answer>
+<answer>Ribozom</answer>
+<answer>Golgi cisimciği</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Günde 12 saat çalıştırılan bir klima, 30 günde 360 TL’lik elektrik enerjisi tüketmektedir.Elektrik enerjisinin 1 kilowattsaat’i 0,5 TL olduğuna göre, bu klimanın gücü kaç kilowatt'tır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>6</questionnumber>
+<answer>1</answer>
+<answer correct="true">2</answer>
+<answer>3</answer>
+<answer>4</answer>
+<answer>5</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Parşömenin Bergama şehrinde icat edilmiş olmasıyla aşağıdaki olaylardan hangisi arasında doğrudan bir ilişki kurulabilir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>7</questionnumber>
+<answer correct="true">
+Bergama Kütüphanesinin, Antik Çağ’ın en zengin iki kütüphanesinden biri olması
+</answer>
+<answer>
+III. Attalos’un Bergama Krallığı’nı bir vasiyetle Roma halkına bırakması
+</answer>
+<answer>
+Bergama Krallığı’nın İyonya ayaklanmasına destek vermesi
+</answer>
+<answer>İskenderiye Kütüphanesinin yakılması</answer>
+<answer>
+Roma’nın MÖ 129’da Bergama Krallığı’nı ele geçirmesi
+</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Anadolu Selçuklu Devleti’nde hükümdarların Keyhüsrev, Keykubat ve Keykavus gibi adlar kullanmalarının aşağıdakilerden hangisini gösterdiği savunulabilir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>8</questionnumber>
+<answer>
+İlk Türk devletlerine ait gelenekleri devam ettirdiklerini
+</answer>
+<answer correct="true">Fars kültürünün etkisinde kaldıklarını</answer>
+<answer>Anadolu’nun eski kültürlerinden etkilendiklerini</answer>
+<answer>Arapça unvanları öne çıkardıklarını</answer>
+<answer>Bizans’ın hükümdarlık unvanlarını kullandıklarını</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Aşağıdakilerden hangisinin, Osmanlı Devleti’nde Türk milliyetçiliğinin gelişmesinde etkili olduğu savunulamaz?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>9</questionnumber>
+<answer>Fransız İhtilali’nin Türk aydınlarını etkilemesi</answer>
+<answer>
+Yapılan ıslahata rağmen Müslüman olmayanların ayrılıkçı hareketlerinin devam etmesi
+</answer>
+<answer>Rusya’dan gelen Türk aydınlarının faaliyetleri</answer>
+<answer>
+Birinci Dünya Savaşı’nda Osmanlı padişahının halife unvanıyla yaptığı cihat çağrısına Arapların uymaması
+</answer>
+<answer correct="true">Tanzimat Fermanı’nın ilan edilmesi</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Harf inkılabı sırasında, Latin alfabesinde bulunan bazı harfler alınmadığı gibi Türkçeye özgü bazı harfler de üretilmiştir.Bu uygulamalara dayanarak harf inkılabıyla ilgili aşağıdakilerden hangisine ulaşılabilir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>10</questionnumber>
+<answer>Arap alfabesinin bir süre daha kullanıldığına</answer>
+<answer>
+Latin alfabesinin alınmasının tepkiyle karşılandığına
+</answer>
+<answer>Eski Türk alfabelerinden de yararlanıldığına</answer>
+<answer correct="true">Latin alfabesinin Türkçeye uyarlandığına</answer>
+<answer>
+Arap alfabesinin bazı harflerinin yeni alfabede yer aldığına
+</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Ülkedeki seçim sonuçlarını, seçmenlerin eğitim düzeyine bakarak yorumlamak ve eğitim düzeyi daha yüksek olanların yönetimde ve siyasette daha çok söz sahibi olması gerektiğini savunmanın, aşağıdaki Atatürk ilkelerinden hangisine aykırı bir yaklaşım olduğu savunulabilir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>11</questionnumber>
+<answer correct="true">Halkçılık</answer>
+<answer>Laiklik</answer>
+<answer>Devletçilik</answer>
+<answer>Milliyetçilik</answer>
+<answer>İnkılapçılık</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Atatürk Dönemi’nde Türkiye, izlediği barışçı dış politika sayesinde bölgede bir istikrar unsuru olmuştur.O dönemde, Türkiye’nin bu konuma ulaşmasında aşağıdaki gelişmelerden hangisinin etkisi olmamıştır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>12</questionnumber>
+<answer>Milletler Cemiyetine üye olunması</answer>
+<answer>Balkan Antantı’nın imzalanması</answer>
+<answer>
+Batılı ülkeler ile Sovyetler Birliği arasında hassas bir denge kurulması
+</answer>
+<answer correct="true">
+Kuzey Atlantik Antlaşması Örgütüne (NATO) üye olunması
+</answer>
+<answer>Sadabat Paktı’nın imzalanması</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+2011’in sonuna doğru gösterime giren bu film,geleneksel sinemanın kullandığı tekniklere bağlı kalmadan, bir hayatta kalma savaşımını insanda yoğunlaşarak anlatıyor.Bu cümleden söz konusu filmle ilgili olarak aşağıdakilerin hangisi çıkarılabilir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>13</questionnumber>
+<answer>
+Belirli bir izleyici kitlesine seslenmek amaçlanmıştır
+</answer>
+<answer correct="true">Yeni çekim yöntemlerine başvurulmuştur</answer>
+<answer>
+Bugüne değin beyaz perdeye taşınmamış bir sorun işlenmiştir.
+</answer>
+<answer>
+Oyuncuların gösterdiği başarıyla çok boyutlu bir yapı kazanmıştır
+</answer>
+<answer>
+Yılın çok izlenen filmleri arasında yerini almıştır
+</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Şiir, yalnızca acıları, yoksunlukları, mutsuzlukları dile getirmemelidir. ----?Bu sözler aşağıdakilerden hangisiyle sürdürülemez?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>14</questionnumber>
+<answer>
+Gerçekte de sevinçle hüzün, ölümle yaşam yan yana karşımıza çıkmaz mı
+</answer>
+<answer>
+Türk halk müziğinde uzun havalardan sonra oyun havalarına geçilmez mi
+</answer>
+<answer>
+Okuyucunun şiirden alacağı hazzı sınırlamaya gerek var mı
+</answer>
+<answer correct="true">
+Günümüzde insan yaşamının trajik yönlerini yansıtan eserler de ilgi çekmiyor mu
+</answer>
+<answer>
+Şiir okuyucusunu karamsarlığa itmenin bir anlamı var mı
+</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+“Rüyaları gerçekleştirmenin yolu, uyanıvermektir uykulardan.” demiş bir düşünür. Öyleyse ne duruyoruz,hemen silkinip kalkalım yumuşak yataklarımızdan!Bu parçada, aşağıdakilerden hangisi yoktur?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>15</questionnumber>
+<answer>Tezlik fiili</answer>
+<answer>Zarf-fiil</answer>
+<answer correct="true">Sıfat-fiil</answer>
+<answer>İstek kipiyle çekimlenmiş fiil</answer>
+<answer>Şimdiki zamanla çekimlenmiş fiil</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Eskiden ülkelerin zenginliğinin ölçütü, sahip olunan toprak ve doğal kaynakların miktarıydı; zenginleşmenin yolu, daha geniş topraklara hükmetmekten geçiyordu. 20. yüzyılın ikinci yarısında bilimsel araştırmalara ağırlık verilmesiyle bu anlayış değişti, bilgi üretimi önem kazandı.Bu parçada aşağıdaki ses olaylarından hangisi yoktur?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>16</questionnumber>
+<answer>Ünlü düşmesi</answer>
+<answer>Ünsüz yumuşaması</answer>
+<answer>Ulama</answer>
+<answer>Ünsüz benzeşmesi</answer>
+<answer correct="true">Ünlü türemesi</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Eserlerinde kullandığı özgün biçimler ve canlı renklerle,değişimin birey üzerindeki etkilerini yansıtıyor.Bu cümleyle ilgili olarak aşağıdakilerden hangisi yanlıştır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>17</questionnumber>
+<answer>Çatısı bakımından etkendir</answer>
+<answer>Nesne, isim tamlamasından oluşmaktadır.</answer>
+<answer>Fiilden isim yapma eki almış sözcük vardır.</answer>
+<answer>Bulunma durumu eki almış sözcük vardır</answer>
+<answer correct="true">İyelik eki alan sözcük yoktur.</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Aşağıdaki cümlelerin hangisinde bir anlatım bozukluğu vardır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>18</questionnumber>
+<answer>Kurallara uymamakta ısrar ediyorsun</answer>
+<answer>
+Bu davranışımı tehdit olarak algıladığını belirtiyorsun.
+</answer>
+<answer>Yaptıklarınla herkesi şaşırtmaya devam ediyorsun</answer>
+<answer correct="true">
+Bu sözlerinle beni sinirlendirmek için çalışıyorsun.
+</answer>
+<answer>
+Sorduğun sorularla konuyu başka bir yere çekmeye çalışıyorsun.
+</answer>
+</questiongroup>
+<questiongroup>
+<question>Which of the following XFree86 tools is used to configure access to remote X11 clients?</question>
+<questiontype>1</questiontype>
+<questionnumber>19</questionnumber>
+<answer>xf86config</answer>
+<answer>xeyes</answer>
+<answer>xaccess</answer>
+<answer correct="true">xdm</answer>
+</questiongroup>
+
+<questiongroup>
+<question>What is the numeric value of the permissions rwsrwrw?</question>
+<questiontype>1</questiontype>
+<questionnumber>20</questionnumber>
+<answer>2744</answer>
+<answer correct="true">4766</answer>
+<answer>4777</answer>
+<answer>4744</answer>
+</questiongroup>
+</section>

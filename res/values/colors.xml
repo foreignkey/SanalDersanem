@@ -16,6 +16,15 @@
     <!-- ITEM TEXT COLORS - STATES - PRESSED AND DEFAULT -->
     <color name="text_color_default">#000000</color>
     <color name="text_color_pressed">#ffffff</color>
+    
+     <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="Bleu">#2020F0</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="BackActivityColor">#F0C0C0</color>
+    <color name="HeaderColor">#C17825</color>
+    <color name="BtnColor">#F0F0C0</color>
 
    
     

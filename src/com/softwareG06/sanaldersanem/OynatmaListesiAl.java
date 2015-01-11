@@ -40,7 +40,7 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 		ResultSetMetaData rsmdSpiner ;
 		PreparedStatement ps;
 		
-		String sorgu="select kurs,ders,playlist from playlist_al group by kurs,ders";
+		String sorgu="select kurs,ders,playlist,uname from playlist_al group by kurs,ders";
 	 
 	@Override
 	  public void onCreate(Bundle savedInstanceState) {
@@ -65,8 +65,8 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
 	 public void cagir(String sorgulama){
 			try {
 				lv= (ListView)findViewById(R.id.lvKulGelen);
-  		   String[] from = new String[] {"textKurs", "textDers","textPlay"};
-			    int[] to = new int[] { R.id.tvKurs, R.id.tvDers,R.id.tvPlay };
+  		   String[] from = new String[] {"textKurs", "textDers","textPlay","textUser"};
+			    int[] to = new int[] { R.id.tvKurs, R.id.tvDers,R.id.tvPlay,R.id.tvUser };
 		        // prepare the list of all records
 		        List<HashMap<String, String>> fillMaps = new ArrayList<HashMap<String, String>>();
 		     
@@ -84,6 +84,7 @@ public class OynatmaListesiAl extends Activity implements OnItemClickListener{
  	        	map.put("textKurs", "" + rsSpiner.getString(1));
  	            map.put("textDers","" + rsSpiner.getString(2));
  	           map.put("textPlay","" + rsSpiner.getString(3));
+ 	          map.put("textUser","" + rsSpiner.getString(4));
 
  	            fillMaps.add(map);
 	            }

@@ -1,0 +1,92 @@
+<section>
+<name>kimya</name>
+
+<questiongroup>
+<question>
+Bir radyonun sesi yükseltildiğinde işitilen ses dalgalarının hangi özelliği artar?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>1</questionnumber>
+<answer>Frekansı</answer>
+<answer>Hızı</answer>
+<answer>Periyodu</answer>
+<answer>Dalga Boyu</answer>
+<answer correct="true">Genliği</answer>
+</questiongroup>
+
+<questiongroup>
+<question>
+Periyodik çizelgede Ca elementi IIA grubunda,Cl elementi ise VIIA grubunda bulunmaktadır.Bu elementler ve birbirleriyle oluşturduğu bileşikle ilgili aşağıdakilerden hangisi yanlıştır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>2</questionnumber>
+<answer>Ca metalik, Cl ametalik özellik gösterir.</answer>
+<answer>Birbirleriyle CaCl2 bileşiğini oluştururlar.</answer>
+<answer correct="true">
+Birbirleriyle oluşturdukları bileşik moleküler yapıdadır.
+</answer>
+<answer>
+Ca element atomu 2 elektron verdiğinde katman elektron dizilimi kendisine en yakın soy gaz elektron dizilimi gibi olur.
+</answer>
+<answer>
+Cl elementi elektron alma, Ca elementi ise elektron verme eğilimindedir.
+</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Aşağıdakilerden hangisi, bir gölde ötrofikasyon olayının meydana getirdiği sonuçlardan biri değildir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>3</questionnumber>
+<answer>Zemine yakın kısımlarda oksijen miktarında azalma</answer>
+<answer correct="true">Bakteri etkinliklerinde azalma</answer>
+<answer>Alg miktarında aşırı çoğalma</answer>
+<answer>Bazı canlı türlerinin birey sayısında azalma</answer>
+<answer>Suyun ışık geçirgenliğinde azalma</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Aşağıdaki organik molekül çiftlerinden hangilerinin yapı taşı benzerdir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>4</questionnumber>
+<answer>Glikojen – Kolesterol</answer>
+<answer correct="true">Glikojen – Nişasta</answer>
+<answer>İnsülin – Kolesterol</answer>
+<answer>İnsülin – Glikojen</answer>
+<answer>İnsülin – Nişasta</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Tatlısularda yaşayan bir paramesyum, bulunduğu ortamdan alınarak derişimi daha yüksek olan bir ortama konulmuştur.Bu durumda paramesyumda aşağıdaki organellerden hangisinin çalışma hızının yavaşlaması beklenir?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>5</questionnumber>
+<answer correct="true">Kontraktil koful</answer>
+<answer>Endoplazmik retikulum</answer>
+<answer>Lizozom</answer>
+<answer>Ribozom</answer>
+<answer>Golgi cisimciği</answer>
+</questiongroup>
+
+
+<questiongroup>
+<question>
+Günde 12 saat çalıştırılan bir klima, 30 günde 360 TL’lik elektrik enerjisi tüketmektedir.Elektrik enerjisinin 1 kilowattsaat’i 0,5 TL olduğuna göre, bu klimanın gücü kaç kilowatt'tır?
+</question>
+<questiontype>1</questiontype>
+<questionnumber>6</questionnumber>
+<answer>1</answer>
+<answer correct="true">2</answer>
+<answer>3</answer>
+<answer>4</answer>
+<answer>5</answer>
+</questiongroup>
+
+</section>

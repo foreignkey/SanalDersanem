@@ -51,5 +51,41 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">1</item>
     </style>
+    
+   
+    <string name="StydyLevel">Stydy Level</string>
+    <string name="valider">Valider</string>
+    <string name="Register">Register</string>
+    <string name="Login">Login</string>
+    <string name="NewAccount"><u>Create new account</u></string>
+    <string name="ChoiceOfLanguage">Kurs seç :</string>
+    <string name="ChoiceOfLevel">Deneme Seç :</string>
+    <string name="ChoiceOfStrategy">Sorular Nalıl Gelsin:</string>
+    <string name="Start">Başlat</string>
+    <string name="Paused">Durduruldu</string>
+    <string name="Exit">Çıkış</string>
+    <string name="save">Kaydet</string>
+    <string name="Logout">Çıkış Yap</string>
+    
+    <string-array name="ListeLevel">
+        <item>Deneme 1</item>
+        <item>Deneme 2</item>
+        <item>Deneme 3</item>
+    </string-array>
+     <string-array name="Listestrategy">
+        <item>Sıralı</item>
+        <item>Rastgele</item>
+    </string-array>
+        <string name="question">Soru</string>
+        <string name="of">/</string>
+        <string name="numberofquestion">20</string>
+        <string name="timer">"Süre : "</string>
+        <string name="correctanswer">Doğru Cevap =</string>
+        <string name="wronganswer">Yanlış Cevap =</string>
+        <string name="precentageofcorrects">Doğru Soruların Yüzesi :</string>
+        <string name="time">Zaman:</string>
+        <string name="result">Sonuç</string>
+        <string name="Your">Senin Cevabın :</string>
+        <string name="Correct">Doğru Cevap :</string>
 
 </resources>

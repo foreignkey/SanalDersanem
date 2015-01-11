@@ -55,16 +55,31 @@ private OnClickListener onClickListener = new OnClickListener() {
             	 startActivity(oyatmaOlustur);
              break;
              case R.id.bThree:
-                 //DO something
+            	 Intent test=new Intent(Giris.this,MakeChoice.class);
+            	 test.putExtra("uname",user );
+            	 test.putExtra("name",name );
+            	 startActivity(test);
              break;
              case R.id.bFour:
-                  //DO something
+            	 showAlert();
              break;
          }
 
    }
 };
 
+public void showAlert(){
+	AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+	alertDialog.setTitle("DeadLock...");
+	alertDialog.setMessage("Uygulama ders kapsamýnda SoftwareG06 tarafýndan yapýlmýþtýr. \n-------------------------\nGRUP ÜYELERÝ\n------------------------- \n\t •Tayip TÜRK \n\t •Anýl EÐER \n\t •Yusuf BAYKAL \n\t •M.Ali Çelik \n\t •Göksel Hamalý\n");
+	alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+	public void onClick(DialogInterface dialog, int which) {
+		 dialog.dismiss();
+	}
+	});
+	alertDialog.setIcon(R.drawable.logomini);
+	alertDialog.show();
+}
 
 /*triggered by showDialog method. onCreateDialog creates a dialog*/
 @Override

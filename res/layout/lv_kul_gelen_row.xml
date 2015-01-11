@@ -8,19 +8,10 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:padding="5dp"
-        android:background="#99CC00"
+        android:background="#ffffff"
         android:layout_margin="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" >
-
-        <TextView
-            android:id="@+id/tvKurs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="10dp"
-            android:text="Kurs"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
             android:id="@+id/tvPlay"
@@ -33,16 +24,38 @@
             android:visibility="invisible" />
 
         <TextView
+            android:id="@+id/tvKurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:paddingRight="10dp"
+            android:text="Kurs"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/tvDers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tvPlay"
-            android:layout_alignBottom="@+id/tvPlay"
-            android:layout_alignLeft="@+id/tvKurs"
-            android:layout_alignRight="@+id/tvPlay"
+            android:layout_alignBaseline="@+id/tvKurs"
+            android:layout_alignBottom="@+id/tvKurs"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
             android:paddingRight="10dp"
             android:text="Ders"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvKurs"
+            android:layout_alignLeft="@+id/tvKurs"
+            android:textStyle="bold"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
 
